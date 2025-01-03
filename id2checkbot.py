@@ -9,6 +9,20 @@ BOT_TOKEN = tg_bot_token
 # Initialize the bot
 bot = telebot.TeleBot(BOT_TOKEN)
 
+# Handle the /start command
+@bot.message_handler(commands=['start'])
+def handle_start(message):
+    bot.send_message(
+        message.chat.id,
+        "Hello! 👋 I'm here to help you identify the source of forwarded messages.\n\n"
+        "Here's how to use me:\n"
+        "1. Forward any message to this bot.\n"
+        "2. I will tell you whether it was forwarded from a user, group, or channel.\n"
+        "3. I will also provide the ID and other details of the source.\n\n"
+        "Try forwarding a message now!"
+    )
+
+# Handle forwarded messages
 @bot.message_handler(func=lambda message: message.forward_from or message.forward_from_chat)
 def handle_forwarded_message(message):
     if message.forward_from:
