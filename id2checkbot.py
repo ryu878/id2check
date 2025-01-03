@@ -3,7 +3,8 @@ from _config import *
 
 
 
-# Replace with your bot token
+ver = '04/01/2005'
+
 BOT_TOKEN = tg_bot_token
 
 # Initialize the bot
@@ -53,5 +54,5 @@ def handle_forwarded_message(message):
         bot.reply_to(message, "Could not identify the source of the forwarded message.")
 
 # Start the bot
-print("Bot is running...")
+print(f'Bot ver {ver} is running...')
 bot.infinity_polling()
