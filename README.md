@@ -21,6 +21,6 @@
 ### Setup  
 1. **Clone the Repository:**  
    ```bash
-   git clone https://github.com/yourusername/id-check-bot.git  
+   git clone https://github.com/ryu878/id-check-bot.git  
    cd id-check-bot  
-```
+    ```
