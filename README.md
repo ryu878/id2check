@@ -2,7 +2,7 @@
 (try it here: https://t.me/id2check_bot)
 
 **A Telegram bot to check the ID of forwarded messages, identify users, and apply rate limits to prevent abuse.**  
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/ba74de64-3720-4e39-bd34-feeb05d559ce)
 
 ---
 
