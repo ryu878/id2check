@@ -15,7 +15,7 @@
 ## Installation  
 
 ### Requirements  
-- Python 3.8+  
+- Python 3.11+  
 - Telegram bot token (obtainable via [BotFather](https://core.telegram.org/bots#botfather))  
 
 ### Setup  
@@ -23,4 +23,8 @@
    ```bash
    git clone https://github.com/ryu878/id-check-bot.git  
    cd id-check-bot  
+    ```
+2. **Install Dependencies:**  
+    ```bash
+    pip install -r requirements.txt
     ```
