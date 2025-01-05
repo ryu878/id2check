@@ -24,7 +24,7 @@ def handle_start(message):
         message.chat.id,
         "Hello! 👋 I'm here to help you identify the source of forwarded messages.\n\n"
         "You can forward any message to me, but please don't spam—requests are limited to one every 5 seconds.\n\n"
-        "Try forwarding a message now!"
+        'Try forwarding a message now!'
     )
 
 @bot.message_handler(func=lambda message: True)
@@ -35,7 +35,7 @@ def handle_request(message):
     if user_id in banned_users:
         unban_time = banned_users[user_id]
         if datetime.now() < unban_time:
-            bot.reply_to(message, "You are banned for exceeding the request limit. Try again later.")
+            bot.reply_to(message, f'You are banned for exceeding the request limit. Try again later.')
             return
         else:
             # Unban the user after the ban duration has passed
@@ -50,7 +50,7 @@ def handle_request(message):
             banned_users[user_id] = datetime.now() + timedelta(hours=BAN_DURATION_HOURS)
             bot.reply_to(
                 message,
-                "You exceeded the request rate limit. You are banned for 24 hours."
+                f'You exceeded the request rate limit. You are banned for 24 hours.'
             )
             return
 
@@ -60,28 +60,28 @@ def handle_request(message):
     # Handle forwarded messages
     if message.forward_from:
         user_id = message.forward_from.id
-        username = message.forward_from.username or "No username"
+        username = message.forward_from.username or 'No username'
         bot.reply_to(
             message,
-            f"The forwarded message is from a user.\n"
+            f'The forwarded message is from a user.\n'
             f"User ID: `{user_id}`\n"
             f"Username: `{username}`",
-            parse_mode="Markdown"
+            parse_mode='Markdown'
         )
     elif message.forward_from_chat:
         forward_chat = message.forward_from_chat
-        chat_type = "Channel" if forward_chat.type == "channel" else "Group"
+        chat_type = 'Channel' if forward_chat.type == 'channel' else 'Group'
         chat_id = forward_chat.id
-        chat_title = forward_chat.title or "No title"
+        chat_title = forward_chat.title or 'No title'
         bot.reply_to(
             message,
-            f"The forwarded message is from a {chat_type}.\n"
+            f'The forwarded message is from a {chat_type}.\n'
             f"Chat ID: `{chat_id}`\n"
             f"Title: `{chat_title}`",
-            parse_mode="Markdown"
+            parse_mode='Markdown'
         )
     else:
-        bot.reply_to(message, "Could not identify the source of the forwarded message.")
+        bot.reply_to(message, f'Could not identify the source of the forwarded message.')
 
 # Start the bot
 print(f'Bot ver {ver} is running...')
