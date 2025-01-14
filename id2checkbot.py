@@ -30,6 +30,7 @@ def handle_start(message):
 @bot.message_handler(func=lambda message: True)
 def handle_request(message):
     user_id = message.from_user.id
+    chat_id = message.chat.id  # This will get the chat ID
 
     # Check if the user is banned
     if user_id in banned_users:
@@ -65,7 +66,8 @@ def handle_request(message):
             message,
             f'The forwarded message is from a user.\n'
             f"User ID: `{user_id}`\n"
-            f"Username: `{username}`",
+            f"Username: `{username}`\n"
+            f"Message sent from chat ID: `{chat_id}`",
             parse_mode='Markdown'
         )
     elif message.forward_from_chat:
@@ -77,12 +79,13 @@ def handle_request(message):
             message,
             f'The forwarded message is from a {chat_type}.\n'
             f"Chat ID: `{chat_id}`\n"
-            f"Title: `{chat_title}`",
+            f"Title: `{chat_title}`\n"
+            f"Message sent from chat ID: `{chat_id}`",
             parse_mode='Markdown'
         )
     else:
         bot.reply_to(message, f'Could not identify the source of the forwarded message.')
 
 # Start the bot
-print(f'Bot ver {ver} is running...')
-bot.infinity_polling()
+print(f' {ver} is running...')
+bot.polling()
