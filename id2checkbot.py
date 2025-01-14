@@ -5,7 +5,7 @@ from _config import *
 
 
 
-ver = '04/01/2005'
+ver = '13/01/2025'
 
 BOT_TOKEN = tg_bot_token
 
