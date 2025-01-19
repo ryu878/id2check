@@ -4,8 +4,9 @@ import time
 from _config import *
 
 
-
-ver = '13/01/2025'
+name = 'id2checkBot'
+ver = '190125'
+print(f' {name} ver: {ver}')
 
 BOT_TOKEN = tg_bot_token
 
@@ -88,4 +89,4 @@ def handle_request(message):
 
 # Start the bot
 print(f' {ver} is running...')
-bot.polling()
+bot.infinity_polling()
