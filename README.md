@@ -1,4 +1,4 @@
-# ID Check Bot  
+# Telegarm ID Check Bot  
 (try it here: https://t.me/id2check_bot)
 
 **A Telegram bot to check the ID of forwarded messages, identify users, and apply rate limits to prevent abuse.**  
