@@ -4,8 +4,8 @@ import time
 from _config import *
 
 
-
-ver = '13/01/2025'
+name = 'id2check'
+ver = '280125'
 
 BOT_TOKEN = tg_bot_token
 
@@ -87,5 +87,5 @@ def handle_request(message):
         bot.reply_to(message, f'Could not identify the source of the forwarded message.')
 
 # Start the bot
-print(f' {ver} is running...')
+print(f' {name} ver: {ver}\n is running...')
 bot.polling()
