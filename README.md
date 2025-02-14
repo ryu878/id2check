@@ -55,8 +55,6 @@ To contact me:
 
 Discord: https://discord.gg/zSw58e9Uvf
 
-🐀 Join Bybit and receive up to $6,045 in Bonuses: https://www.bybit.com/invite?ref=X2PZB
-
 😎 Register on BingX and get a **20% discount** on fees: https://bingx.com/invite/HAJ8YQQAG/
 
 ## VPS for bots and scripts
