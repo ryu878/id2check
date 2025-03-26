@@ -51,11 +51,19 @@
 
 ## Contacts
 I develop trading bots of any complexity, dashboards and indicators for crypto exchanges, forex and stocks.
-To contact me:
+To contact me please pm:
+
+Telegram: https://t.me/vi8ilante
 
 Discord: https://discord.gg/zSw58e9Uvf
 
-😎 Register on BingX and get a **20% discount** on fees: https://bingx.com/invite/HAJ8YQQAG/
+## Crypto Exchanges
+
+😎 Register on BingX and get a 20% discount on fees: https://bingx.com/invite/HAJ8YQQAG/
+
+👍 MEXC: https://promote.mexc.com/r/f3dtDLZK
+
+🐀 Join Bybit: https://www.bybit.com/invite?ref=P11NJW
 
 ## VPS for bots and scripts
 I prefer using DigitalOcean.
